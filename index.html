@@ -28,7 +28,9 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh; /* 讓footer保持在底部 */
-        }
+        } 
+
+        
 
         a {
             text-decoration: none;
@@ -163,6 +165,31 @@
             margin-top: 1.5em;
         }
 
+        table {
+            margin-left: auto;
+            margin-right: auto;
+            /* 讓表格在父元素中置中，如果表格寬度不是 100% 效果會更明顯 */
+            width: auto; 
+            max-width: 100%;
+        }
+
+        th, td {
+            text-align: center; 
+        }
+        /* 保持您原有的 td 規則，以確保它優先應用於 td，但現在 th 也被納入置中 */
+        table td {
+            text-align: center; /* 學校名稱將在單元格內居中 */
+        }
+        
+        #section1 section,#section3 section,#section4 section,#section5 section,#section6 section {
+            text-align: center;
+        }
+        #section7 section p {
+            text-align: left; /* 讓段落文字靠左 */
+            /* 讓地圖的父元素寬度滿版，確保左對齊效果 */
+            width: 100%; 
+        }
+
         /* 頁尾區 */
         footer {
             background-color: var(--primary-color);
@@ -238,7 +265,7 @@
         <nav>
             <a href="#section1">關於我</a>
             <a href="#section2">求學經歷</a>
-            <a href="#section3">特殊技能</a>
+            <a href="#section3">在校生活</a>
             <a href="#section4">音樂作品</a>
             <a href="#section5">影片作品</a>
             <a href="#section6">圖片作品</a>
@@ -276,6 +303,7 @@
             <section>
                 <table>
                     <thead>
+                        <br>
                         <tr>
                             <th>時間</th>
                             <th>學校</th>
@@ -288,11 +316,11 @@
                         </tr>
                         <tr>
                             <td>2021</td>
-                            <td>高雄女中</td>
+                            <td>高雄市立高雄女子高級中學</td>
                         </tr>
                         <tr>
                             <td>2018</td>
-                            <td>中山大學附中</td>
+                            <td>國立中山大學附屬國光高級中學</td>
                         </tr>
                     </tbody>
                 </table>
@@ -301,12 +329,13 @@
         <!-- 技能 -->
          <article id="section3">
             <header>
-                <h2>特殊技能</h2>
+                <h2>在校生活</h2>
             </header>
             <section>
                 <table>
                     <table border="1">
                     <tr>
+                        <br>
                         <th>程式語言</th>
                         <th>等級</th>
                     </tr>
@@ -346,8 +375,26 @@
                         <td>校長盃</td>
                     </tr>
                     </tr>
-                    
                 </table>
+                 <br>
+                 <figcaption>新球衣新氣象！目前排球比賽勝率100%</figcaption>
+                <img src="assets/圖片/排球比賽1.jpg" alt="排球1" width=270>
+                <br>
+                <img src="assets/圖片/排球比賽2.jpg" alt="排球2" width=270>
+                <img src="assets/圖片/排球比賽3.jpg" alt="排球3" width=270>
+                <figcaption>羽球校長盃</figcaption>
+                <img src="assets/圖片/羽球1.JPG" alt="羽球1" width=170 >
+                <img src="assets/圖片/羽球3.JPG" alt="羽球3" width=170 >
+                <video controls width="340">
+                <source src="assets/影片/羽球2.MP4" type="audio/mpeg">                
+            </video>
+            <figcaption>女生4*100大隊接力 全校第二名！！</figcaption>
+                <img src="assets/圖片/大隊2.JPG" alt="大隊2" width=170>
+                <img src="assets/圖片/大隊3.JPG" alt="大隊3" width=170>
+                <video controls width="170">
+                <source src="assets/影片/大隊1.mp4" type="audio/mpeg">                
+            </video>
+                <br>
             </section>
         </article>
         <!-- 音樂作品 -->
@@ -382,6 +429,7 @@
                 <h2>圖片作品</h2>
             </header>
             <section>
+                <br>
                 <img src="assets/圖片/礁島1.png" alt="寫實礁島" width="470">
                 <figcaption>寫實風格的礁島想像</figcaption>
                 <br>
@@ -425,7 +473,6 @@
     
     <!-- 頁尾區 -->
     <footer>
-        <hr >
         <p>聯絡我們：s111316040@stu.ntue.edu.tw</p>
         <time datatime="2025-11-17">最後更新日期：2025年11月17日</time>
     </footer>
