@@ -3,6 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <title>曾薆</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* 全局設定 */
+        :root {
+            --primary-color: #2c3e50; /* 深藍灰色 */
+            /*--secondary-color: #3498db; /* 亮藍色 */
+            --accent-color: #000080; /* 鮮紅色 */
+            --light-bg: #f8f8f8; /* 淺灰色背景 */
+            --dark-text: #221d1d; /* 深色文字 */
+            --light-text: #fff; /* 淺色底色 */
+            --border-color: #ddd; /* 邊框顏色 */
+            --hover-color: #2980b9; /* 懸停顏色 */
+            --light-gray-title: #f0f3f6; /* **新增：淺灰色標題顏色** */
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif; /* 使用思源黑體 */
+            line-height: 1.00;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* 讓footer保持在底部 */
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+        }
+
+        a:hover {
+            color: var(--hover-color);
+            text-decoration: underline;
+        }
+
+        /* 頁頭區 */
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            padding: 1.5em 0;
+            text-align: center;
+            box-shadow: 0 1px rgba(76, 80, 78, 0.4);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            letter-spacing: 2px;
+            color: var(--light-text);
+        }
+
+        nav {
+            margin-top: 1em;
+        }
+
+        nav a {
+            color: var(--light-text);
+            margin: 0 1.2em;
+            font-weight: 400;
+            transition: color 0.3s ease;
+            padding: 0.5em 0;
+            position: relative;
+        }
+
+        /*nav a::after { /* 下劃線動畫效果 
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }*/
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* 主要內容區 */
+        main {
+            max-width: 960px;
+            margin: 2em auto;
+            padding: 0 1.5em;
+            flex-grow: 1; /* 讓main區塊佔據剩餘空間 */
+        }
+
+        article {
+            background-color: var(--light-text);
+            padding: 2.5em;
+            margin-bottom: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid var(--secondary-color); /* 左側強調邊框 */
+        }
+
+        article h2 {
+            color: var(--light-gray-title);
+            font-size: 2.2em;
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.3em;
+            display: inline-block; /* 讓border只在文字下方 */
+        }
+
+        article header p {
+            font-style: italic;
+            color: #b0c4de;
+            margin-top: 0.5em;
+        }
+
+        /* 關於我區塊 */
+        .about-me-intro {
+            display: flex;
+            align-items: center;
+            gap: 300px; /* 圖片和文字之間的間距 */
+            margin-bottom: 2em;
+            flex-wrap: wrap; /* RWD考慮 */
+        }
+
+        .about-me-intro img {
+            width: 150px;
+            height: 150px;
+            /*border-radius: 50%; /* 圓形圖片 */
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        .about-me-intro div {
+            flex-grow: 1;
+        }
+
+        .about-me-intro h1 {
+            font-size: 2.5em;
+            margin: 0 0 0.2em 0;
+            color: var(--accent-color); /* 名字強調色 */
+        }
+
+        .about-me-intro p {
+            font-size: 1.1em;
+            color: #555;
+            margin: 0;
+        }
+
+        .about-me-intro a {
+            font-weight: 700;
+        }
+
+        /* 詳細介紹 */
+        .detailed-description {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+            margin-top: 1.5em;
+        }
+
+        /* 頁尾區 */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2em 0;
+            font-size: 0.9em;
+            margin-top: 3em; /* 增加底部間距 */
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer p, footer time {
+            margin: 0.5em 0;
+        }
+
+        footer a {
+            color: var(--secondary-color); /* 連結使用亮藍色 */
+            text-decoration: underline;
+        }
+
+        /* RWD 響應式設計 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            nav a {
+                margin: 0 0.8em;
+                font-size: 0.9em;
+            }
+            main {
+                margin: 1.5em auto;
+                padding: 0 1em;
+            }
+            article {
+                padding: 1.5em;
+            }
+            article h2 {
+                font-size: 1.8em;
+            }
+            .about-me-intro {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .about-me-intro img {
+                width: 120px;
+                height: 120px;
+            }
+            .about-me-intro h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav a {
+                display: block;
+                margin: 0.5em auto;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            article h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
 </head>
 <body>
     <!-- 頁頭區 -->
@@ -11,11 +238,11 @@
         <nav>
             <a href="#section1">關於我</a>
             <a href="#section2">求學經歷</a>
-            <a href="#section3">技能</a>
+            <a href="#section3">特殊技能</a>
             <a href="#section4">音樂作品</a>
             <a href="#section5">影片作品</a>
             <a href="#section6">圖片作品</a>
-            <a href="#section7">更多</a>
+            <a href="#section7">更多資訊</a>
         </nav>
     </header>
     
@@ -74,7 +301,7 @@
         <!-- 技能 -->
          <article id="section3">
             <header>
-                <h2>技能</h2>
+                <h2>特殊技能</h2>
             </header>
             <section>
                 <table>
