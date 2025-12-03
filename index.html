@@ -176,18 +176,45 @@
         th, td {
             text-align: center; 
         }
+
+        #section2 table thead th {
+            background-color: var(--primary-color); /* 深藍灰背景 */
+            color: var(--light-text); /* 白色文字 */
+            font-weight: 700;
+            text-align: center; /* 標題置中 */
+        }
+        #section2 table td {
+            border: 1px solid var(--border-color); /* 淺灰線條 */
+            padding: 15px 10px;
+            vertical-align: middle; /* 垂直居中對齊 */
+        }
+        
+
         /* 保持您原有的 td 規則，以確保它優先應用於 td，但現在 th 也被納入置中 */
         table td {
             text-align: center; /* 學校名稱將在單元格內居中 */
         }
         
-        #section1 section,#section3 section,#section4 section,#section5 section,#section6 section {
+        #section1 section,#section3 section,#section4 section,#section5 section,#section6 section,#section7 section, #section8 section {
             text-align: center;
         }
-        #section7 section p {
+        #section8 section h1 {
             text-align: left; /* 讓段落文字靠左 */
-            /* 讓地圖的父元素寬度滿版，確保左對齊效果 */
             width: 100%; 
+        }
+        
+        /* ★★★ 修正點：讓 #section8 內的地圖置中 ★★★ */
+        #section8 section iframe  {
+            display: block;      /* 讓地圖像區塊一樣佔據一行 */
+            margin-left: auto;   /* 讓左邊界自動分配 */
+            margin-right: auto;  /* 讓右邊界自動分配，實現置中 */
+            margin-top: 15px;    /* 增加一點地圖上方的間距 */
+        }
+        #section3 section iframe  {
+                  /* 讓地圖像區塊一樣佔據一行 */
+            margin-left: 5px;   /* 讓左邊界自動分配 */
+            margin-right: 5px   ;  /* 讓右邊界自動分配，實現置中 */
+            margin-top: 15px;    /* 增加一點地圖上方的間距 */
         }
 
         /* 頁尾區 */
@@ -257,7 +284,6 @@
         }
     </style>
 </head>
-</head>
 <body>
     <!-- 頁頭區 -->
     <header>
@@ -266,10 +292,11 @@
             <a href="#section1">關於我</a>
             <a href="#section2">求學經歷</a>
             <a href="#section3">在校生活</a>
-            <a href="#section4">音樂作品</a>
-            <a href="#section5">影片作品</a>
-            <a href="#section6">圖片作品</a>
-            <a href="#section7">更多資訊</a>
+            <a href="#section4">專業技能</a>
+            <a href="#section5">音樂作品</a>
+            <a href="#section6">影片作品</a>
+            <a href="#section7">圖片作品</a>
+            <a href="#section8">更多資訊</a>
         </nav>
     </header>
     
@@ -284,7 +311,7 @@
             <section>
                 <table cellspacing="30">
                     <tr>
-                        <td><img src="assets/圖片/個人照片.png" alt="曾薆"></td>  <!-- 個人照片 -->
+                        <td><img src="assets/picture/me.png" alt="曾薆"></td>  <!-- 個人照片 -->
                         <td><h1>曾薆</h1><p>
                             <em><strong><a href="https://www.ntue.edu.tw/">國北教大</a></strong>學生</em></p></td>
                     </tr>
@@ -302,34 +329,109 @@
             </header>
             <section>
                 <table>
-                    <thead>
-                        <br>
-                        <tr>
-                            <th>時間</th>
-                            <th>學校</th>
-                        </tr>
-                    </thead>
-                    <tbody>
                         <tr>
                             <td>2024</td>
                             <td>國立台北教育大學資訊科學系</td>
+                            <td><img src="assets/picture/ntue.jpg" alt="ntue" width=270></td>
                         </tr>
                         <tr>
                             <td>2021</td>
                             <td>高雄市立高雄女子高級中學</td>
+                            <td><img src="assets/picture/kghs.jpg" alt="kghs" width=270></td>
                         </tr>
                         <tr>
                             <td>2018</td>
                             <td>國立中山大學附屬國光高級中學</td>
+                            <td><img src="assets/picture/kksh.jpeg" alt="kksh" width=270></td>
                         </tr>
-                    </tbody>
                 </table>
             </section>
         </article>
-        <!-- 技能 -->
+        <!-- 生活 -->
          <article id="section3">
             <header>
                 <h2>在校生活</h2>
+            </header>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <h3>排盟比賽</h3>
+                             <p>目前勝率100%！！</p>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="assets/picture/vo1.jpg" alt="vo1" width=270></td>
+                            <td><img src="assets/picture/vo2.jpg" alt="vo2" width=270></td>
+                            <td><img src="assets/picture/vo3.jpg" alt="vo3" width=270></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>   
+                    <thead>
+                        <tr>
+                            <h3>羽球校長盃</h3>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="assets/picture/bat1.JPG" alt="bat1" width=150 ></td>
+                            <td><img src="assets/picture/bat3.JPG" alt="bat3" width=150 ></td>
+                            <td><video controls width="240">
+                                <source src="assets/video/bat2.MP4" type="audio/mpeg">                
+                                </video></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>   
+                    <thead>
+                        <tr>
+                            <h3>女生4*100大隊接力</h3>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="assets/picture/run2.JPG" alt="run2" width=150 ></td>
+                            <td><img src="assets/picture/run3.JPG" alt="run3" width=150 ></td>
+                            <td><video controls width="150">
+                                <source src="assets/video/run1.mp4" type="audio/mpeg">                
+                                </video></td>
+                                <p>全校第二名！！</p>
+                        </tr>
+                    </tbody>
+                </table>
+               <h3>🥢附近美食：</h3>
+                <p style="text-align:center;"></p>
+                <table>   
+                    <thead>
+                        <tr>
+                            <th colspan="2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57841.228569422674!2d121.48969745803237!3d25.03146810147458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5a0c8b42fd%3A0x4288d0d30ae37803!2z6Zi_5a2f55-z56KX54eS5rKz57KJ!5e0!3m2!1szh-TW!2stw!4v1764570198811!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                            <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2073198164944!2d121.53835298335038!3d25.027037420633658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab08189e63fd%3A0xfe759ff26bb74e24!2z5b6h6byO5qW15ZOB6LGs6IWzIOW-qeiIiOW6lw!5e0!3m2!1szh-TW!2stw!4v1764570268464!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                        </tr>
+                        <tr>
+                            <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.1861427194717!2d121.54067107564101!3d25.027756277820437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2c71853cbb%3A0xac816a1328607a4b!2z5o-Q5ouJ57Gz6JiH57K-57e76JuL57OV!5e0!3m2!1szh-TW!2stw!4v1764570634969!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                            <td><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3007461617976!2d121.54432964086064!3d25.025279475647324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2e83b4334f%3A0x7f7df83f971e34e0!2z5qGC5bir5YKF5ru35ZGz56eR5oqA5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1764570700135!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3022192096328!2d121.53794398334965!3d25.023815820641012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab422a63a317%3A0x9774bc067e2d8fb!2z6KO45rmv5ouJ6bq1wrfpm57nmb3mua8o5ZKM5bmz5bqXKQ!5e0!3m2!1szh-TW!2stw!4v1764570733106!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3328329254355!2d121.54022357564067!3d25.02277647782363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab62a45e4787%3A0x7b95d94114fb2a9a!2zT05FIEdPT0Tng6Togonpo68o5aSn5a6J5bqX77yJ!5e0!3m2!1szh-TW!2stw!4v1764570778349!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3497512968897!2d121.54021397564071!3d25.022202077823998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab03693863e7%3A0x280db1a770177297!2z5p2O6KiY5rC06aSD!5e0!3m2!1szh-TW!2stw!4v1764570801115!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3520987511274!2d121.53994827564067!3d25.022122377824136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa28b54f3193%3A0x8b2a07d660f24ae!2z5b6u56yR5bua5oi_5rSL6aOf6aSo!5e0!3m2!1szh-TW!2stw!4v1764570822533!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3422317382774!2d121.54033977564082!3d25.022457377823933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2f337eecb7%3A0x295c0225d3dd352a!2z5LqU5Lmd6bq16aSo!5e0!3m2!1szh-TW!2stw!4v1764570843180!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1128.275707340475!2d121.54245802499044!3d25.02352370117222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb762ae1701%3A0x9534e0f9cd91345b!2zTXIuU21pbGUg5aW95ZCD6Zue5o6SIOW-qeiIiOW6lw!5e0!3m2!1szh-TW!2stw!4v1764570896214!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+        </article>
+         <!-- 技能 -->
+         <article id="section4">
+            <header>
+                <h2>專業技能</h2>
             </header>
             <section>
                 <table>
@@ -376,45 +478,27 @@
                     </tr>
                     </tr>
                 </table>
-                 <br>
-                 <figcaption>新球衣新氣象！目前排球比賽勝率100%</figcaption>
-                <img src="assets/圖片/排球比賽1.jpg" alt="排球1" width=270>
-                <br>
-                <img src="assets/圖片/排球比賽2.jpg" alt="排球2" width=270>
-                <img src="assets/圖片/排球比賽3.jpg" alt="排球3" width=270>
-                <figcaption>羽球校長盃</figcaption>
-                <img src="assets/圖片/羽球1.JPG" alt="羽球1" width=170 >
-                <img src="assets/圖片/羽球3.JPG" alt="羽球3" width=170 >
-                <video controls width="340">
-                <source src="assets/影片/羽球2.MP4" type="audio/mpeg">                
-            </video>
-            <figcaption>女生4*100大隊接力 全校第二名！！</figcaption>
-                <img src="assets/圖片/大隊2.JPG" alt="大隊2" width=170>
-                <img src="assets/圖片/大隊3.JPG" alt="大隊3" width=170>
-                <video controls width="170">
-                <source src="assets/影片/大隊1.mp4" type="audio/mpeg">                
-            </video>
-                <br>
+                 
             </section>
         </article>
         <!-- 音樂作品 -->
-         <article id="section4">
+         <article id="section5">
             <header>
                 <h2>音樂作品</h2>
             </header>
             <section>
                 <h4>純音樂版本
                 <audio controls>
-                <source src="assets/音樂/沒歌詞.mp3.mp3" type="audio/mpeg">
+                <source src="assets/music/music.mp3.mp3" type="audio/mpeg">
                 </audio>
                 <h4>有歌詞版本
                 <audio controls>
-                <source src="assets/音樂/有歌詞.mp3" type="audio/mpeg">
+                <source src="assets/music/song.mp3" type="audio/mpeg">
                 </audio>
             </section>
         </article>
         <!-- 影片作品 -->
-         <article id="section5">
+         <article id="section6">
             <header>
                 <h2>影片作品</h2>
             </header>
@@ -423,20 +507,20 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/GaQ0SKAYtaE?si=56kF5u3_X6H5Qwyl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </section>
         </article>
-        <!-- 圖片作品 -->
-         <article id="section6">
+        <!-- picture作品 -->
+         <article id="section7">
             <header>
                 <h2>圖片作品</h2>
             </header>
             <section>
                 <br>
-                <img src="assets/圖片/礁島1.png" alt="寫實礁島" width="470">
+                <img src="assets/picture/island1.png" alt="island1" width="470">
                 <figcaption>寫實風格的礁島想像</figcaption>
                 <br>
-                <img src="assets/圖片/礁島2.png" alt="蠟筆礁島" width="470">
+                <img src="assets/picture/island2.png" alt="island2" width="470">
                 <figcaption>蠟筆風格的礁島想像</figcaption>
                 <br>
-                <img src="assets/圖片/美味蟹堡.png" alt="美味蟹堡" width="470">
+                <img src="assets/picture/eat.png" alt="delicious_crab_burger" width="470">
                 <figcaption><h3>slogan：從比奇堡爬上餐桌的滋味。</h3>
                 介紹：🦀【蟹王堡】– 童年夢想，一口實現！🍔
                 你從小也想吃一口海綿寶寶煎的神祕蟹堡嗎？現在，不用潛入比奇堡——我們把整隻海霸級螃蟹，直接夾進漢堡裡！
@@ -444,30 +528,37 @@
                 ⚠️ 小心螯夾：這不是蟹肉餅，這是整隻硬殼活力蟹！
                 🔥 限量供應，勇敢挑戰者限定！
                 🍟 搭配金黃螺旋薯圈，套餐只在【海底漢堡研究所】獨家販售！
-                
-</figcaption>
+                </figcaption>
             </section>
         </article>
 
-         <article id="section7">
+         <article id="section8">
             <header>
                 <h2>更多資訊</h2>
             </header>
             <section>
-                <p>學校地點：</p>
+                <h1>🏫學校地點：</h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2784024338266!2d121.54206247541927!3d25.02462437782254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a908a8232611%3A0xeebfb2d71a5025c7!2z5ZyL56uL6Ie65YyX5pWZ6IKy5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1731827435609!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <p>附近美食：</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57841.228569422674!2d121.48969745803237!3d25.03146810147458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab5a0c8b42fd%3A0x4288d0d30ae37803!2z6Zi_5a2f55-z56KX54eS5rKz57KJ!5e0!3m2!1szh-TW!2stw!4v1764570198811!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2073198164944!2d121.53835298335038!3d25.027037420633658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab08189e63fd%3A0xfe759ff26bb74e24!2z5b6h6byO5qW15ZOB6LGs6IWzIOW-qeiIiOW6lw!5e0!3m2!1szh-TW!2stw!4v1764570268464!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.1861427194717!2d121.54067107564101!3d25.027756277820437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2c71853cbb%3A0xac816a1328607a4b!2z5o-Q5ouJ57Gz6JiH57K-57e76JuL57OV!5e0!3m2!1szh-TW!2stw!4v1764570634969!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3007461617976!2d121.54432964086064!3d25.025279475647324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2e83b4334f%3A0x7f7df83f971e34e0!2z5qGC5bir5YKF5ru35ZGz56eR5oqA5aSn5qiT!5e0!3m2!1szh-TW!2stw!4v1764570700135!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3022192096328!2d121.53794398334965!3d25.023815820641012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab422a63a317%3A0x9774bc067e2d8fb!2z6KO45rmv5ouJ6bq1wrfpm57nmb3mua8o5ZKM5bmz5bqXKQ!5e0!3m2!1szh-TW!2stw!4v1764570733106!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3328329254355!2d121.54022357564067!3d25.02277647782363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab62a45e4787%3A0x7b95d94114fb2a9a!2zT05FIEdPT0Tng6Togonpo68o5aSn5a6J5bqX77yJ!5e0!3m2!1szh-TW!2stw!4v1764570778349!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3497512968897!2d121.54021397564071!3d25.022202077823998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab03693863e7%3A0x280db1a770177297!2z5p2O6KiY5rC06aSD!5e0!3m2!1szh-TW!2stw!4v1764570801115!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3520987511274!2d121.53994827564067!3d25.022122377824136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa28b54f3193%3A0x8b2a07d660f24ae!2z5b6u56yR5bua5oi_5rSL6aOf6aSo!5e0!3m2!1szh-TW!2stw!4v1764570822533!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.3422317382774!2d121.54033977564082!3d25.022457377823933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2f337eecb7%3A0x295c0225d3dd352a!2z5LqU5Lmd6bq16aSo!5e0!3m2!1szh-TW!2stw!4v1764570843180!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1128.275707340475!2d121.54245802499044!3d25.02352370117222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb762ae1701%3A0x9534e0f9cd91345b!2zTXIuU21pbGUg5aW95ZCD6Zue5o6SIOW-qeiIiOW6lw!5e0!3m2!1szh-TW!2stw!4v1764570896214!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </section>
+                 <h1>🐘🐇🦜動物園成員：</h1>
+                 <table>
+                    <tr>
+                        <th>
+                            <img src="assets/picture/zoo1.jpg" alt="zoo1" width="470">
+                        </th>
+                        <th>
+                            <img src="assets/picture/zoo2.jpg" alt="zoo2" width="470">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="assets/picture/zoo3.jpg" alt="zoo3" width="470">
+                        </th>
+                        <th>
+                            <img src="assets/picture/zoo4.jpg" alt="zoo4" width="470">
+                        </th>
+                    </tr>
+                 </table>
+                </section>
         </article>
     </main>
     
